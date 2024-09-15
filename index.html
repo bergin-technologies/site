@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Bergin Technologies" data-ja="Bergin Technologies">Bergin Technologies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #f4f4f4;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 data-en="Bergin Technologies" data-ja="Bergin Technologies">Bergin Technologies</h1>
+        <div class="lang-switcher">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('ja')">日本語</button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about" data-en="About" data-ja="会社概要">About</a></li>
+            <li><a href="#services" data-en="Services" data-ja="サービス">Services</a></li>
+            <li><a href="#contact" data-en="Contact" data-ja="お問い合わせ">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2 data-en="About Us" data-ja="会社概要">About Us</h2>
+            <p data-en="We are an Information Technology company specializing in cybersecurity and secure application development." data-ja="当社は、サイバーセキュリティと安全なアプリケーション開発を専門とする情報技術企業です。">We are an Information Technology company specializing in cybersecurity and secure application development.</p>
+        </section>
+
+        <section id="services">
+            <h2 data-en="Our Services" data-ja="サービス">Our Services</h2>
+            <ul>
+                <li data-en="Application Development" data-ja="アプリケーション開発">Application Development</li>
+                <li data-en="Vulnerability Assessments" data-ja="脆弱性評価">Vulnerability Assessments</li>
+                <li data-en="Network Security Monitoring" data-ja="ネットワークセキュリティ監視">Network Security Monitoring</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2 data-en="Contact Us" data-ja="お問い合わせ">Contact Us</h2>
+            <p data-en="Email: info@bergin.jp" data-ja="メール: info@bergin.jp">Email: info@bergin.jp</p>
+        </section>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-en]').forEach(elem => {
+                elem.textContent = elem.getAttribute(`data-${lang}`);
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
