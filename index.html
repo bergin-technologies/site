@@ -32,7 +32,7 @@
             text-align: right;
             margin-top: 10px;
         }
-        .button {
+        .contact-button {
             border-radius: 10px;
             background-color: #008CBA;
             border: none;
@@ -43,14 +43,25 @@
             display: inline-block;
             font-size: 16px;
         }
+        .lang-button {
+            border-radius: 5px;
+            background-color: #555555;
+            border: none;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 11px;
+        }
     </style>
 </head>
 <body>
     <header>
         <img src="logo.png" height="100">
         <div class="lang-switcher">
-            <button onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('ja')">日本語</button>
+            <button class="lang-button" onclick="switchLanguage('en')">English</button>
+            <button class="lang-button" onclick="switchLanguage('ja')">日本語</button>
         </div>
     </header>
 
@@ -65,7 +76,7 @@
             <p data-en="Ready to take your IT to the next level? Contact us today to discuss your project and discover how Bergin Technologies can help you achieve your goals." data-ja="IT を次のレベルに引き上げる準備はできていますか? 今すぐお問い合わせいただき、プロジェクトについてご相談いただき、Bergin Technologies が目標達成にどのように役立つかをご確認ください。">
                 Ready to take your IT to the next level? Contact us today to discuss your project and discover how Bergin Technologies can help you achieve your goals.
             </p>
-            <a data-en="Get in Touch" data-ja="お問い合わせ" href="mailto:info@bergin.jp" class="button">Get in Touch</a>
+            <a data-en="Get in Touch" data-ja="お問い合わせ" href="mailto:info@bergin.jp" class="contact-button">Get in Touch</a>
         </section>
 
         <section id="services">
