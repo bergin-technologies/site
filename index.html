@@ -84,7 +84,7 @@
             color: #000;
         }
         .service-card {
-            flex-basis: calc(40% - 10px);
+            flex-basis: calc(45% - 10px);
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
@@ -98,11 +98,29 @@
             padding-left: 20px;
             margin-bottom: 0;
         }
+        .choose-card {
+            flex-basis: calc(30% - 10px);
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .choose-card h3 {
+            margin-top: 0;
+            color: #000;
+        }
+        .choose-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
         @media (max-width: 768px) {
             .info-card {
                 flex-basis: 100%;
             }
             .service-card {
+                flex-basis: 100%;
+            }
+            .choose-card {
                 flex-basis: 100%;
             }
         }
