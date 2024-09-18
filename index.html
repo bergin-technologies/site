@@ -20,6 +20,25 @@
             text-align: left;
             padding: 1rem;
         }
+        #logo {
+            height: 60px;
+        }
+        #lang-switcher {
+            text-align: right;
+            padding: 10px 10px 0px 0px;
+        }
+        .lang-button {
+            border-radius: 5px;
+            background-color: #555555;
+            border: none;
+            color: white;
+            margin: auto;
+            padding: 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
         .container {
             width: 90%;
             margin: auto;
@@ -45,25 +64,15 @@
             text-decoration: none;
             display: inline-block;
         }
-        .lang-button {
-            border-radius: 5px;
-            background-color: #555555;
-            border: none;
-            color: white;
-            margin: auto;
-            padding: 8px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" height="60px">
-        <a href="#" class="lang-button" onclick="switchLanguage('en')">English</a>
-        <a href="#" button class="lang-button" onclick="switchLanguage('ja')">日本語</a>
+        <img id="logo" src="logo.png">
+        <div id="lang-switcher">
+            <a href="#" class="lang-button" onclick="switchLanguage('en')">English</a>
+            <a href="#" button class="lang-button" onclick="switchLanguage('ja')">日本語</a>
+        </div>
     </header>
 
     
