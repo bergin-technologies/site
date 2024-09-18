@@ -72,23 +72,37 @@
             gap: 20px;
             justify-content: space-between;
         }
-        .card {
-            flex-basis: calc(30% - 10px);
+        .infox-card {
+            flex-basis: calc(60% - 10px);
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .card h3 {
+        .info-card h3 {
             margin-top: 0;
             color: #000;
         }
-        .card ul {
+        .service-card {
+            flex-basis: calc(25% - 10px);
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            margin-top: 0;
+            color: #000;
+        }
+        .service-card ul {
             padding-left: 20px;
             margin-bottom: 0;
         }
         @media (max-width: 768px) {
-            .card {
+            .info-card {
+                flex-basis: 100%;
+            }
+            .service-card {
                 flex-basis: 100%;
             }
         }
@@ -107,7 +121,7 @@
        <section id="contact">
            <h2 data-en="Ready to take your IT to the next level?" data-ja="IT を次のレベルに引き上げる準備はできていますか?">Ready to take your IT to the next level?</h2>
            <div class="flex-container">
-               <div class="card">
+               <div class="info-card">
                    <p data-en="Contact us today to discuss your project and discover how Bergin Technologies can help you achieve your goals." data-ja="今すぐお問い合わせいただき、プロジェクトについてご相談いただき、Bergin Technologies が目標達成にどのように役立つかをご確認ください。">
                        Contact us today to discuss your project and discover how Bergin Technologies can help you achieve your goals.
                    </p>
@@ -119,7 +133,7 @@
         <section id="about">
             <h2 data-en="Empowering Your Business with Innovative IT Solutions" data-ja="革新的なITソリューションでビジネスを強化">Empowering Your Business with Innovative IT Solutions</h2>
             <div class="flex-container">
-                <div class="card">
+                <div class="info-card">
                     <p data-en="At Bergin Technologies, we specialize in providing IT services tailored to meet the unique needs of small businesses, startups, and individual clients. With a focus on Application Development, IT Consulting, Cybersecurity, Technical Support and Managed Services, we are your trusted partner in navigating the ever-evolving world of technology." data-ja="Bergin Technologies は、中小企業、新興企業、個人のお客様の独自のニーズに合わせた IT サービスの提供を専門としています。アプリケーション開発、IT コンサルティング、サイバーセキュリティ、テクニカル サポート、マネージド サービスに重点を置き、常に進化するテクノロジーの世界をナビゲートする信頼できるパートナーです。">At Bergin Technologies, we specialize in providing IT services tailored to meet the unique needs of small businesses, startups, and individual clients. With a focus on Application Development, IT Consulting, Cybersecurity, Technical Support and Managed Services, we are your trusted partner in navigating the ever-evolving world of technology.</p>
                 </div>
             </div>
@@ -128,7 +142,7 @@
         <section id="services">
             <h2 data-en="Our Services" data-ja="サービス">Our Services</h2>
             <div class="flex-container">
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Application Development" data-ja="アプリケーション開発">Application Development</h3>
                     <ul>
                         <li data-en="Web Development" data-ja="ウェブ開発">Web Development</li>
@@ -137,7 +151,7 @@
                     </ul>
                 </div>
                 
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="IT Consulting" data-ja="ITコンサルティング">IT Consulting</h3>
                     <ul>
                         <li data-en="Technology Strategy Consulting" data-ja="テクノロジー戦略コンサルティング">Technology Strategy Consulting</li>
@@ -146,7 +160,7 @@
                     </ul>
                 </div>
                 
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Cybersecurity Consulting" data-ja="サイバーセキュリティコンサルティング">Cybersecurity Consulting</h3>
                     <ul>
                         <li data-en="Security Strategy Consulting" data-ja="セキュリティ戦略コンサルティング">Security Strategy Consulting</li>
@@ -155,7 +169,7 @@
                     </ul>
                 </div>
                 
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Technical Support and Managed Services" data-ja="テクニカルサポートとマネージドサービス">Technical Support and Managed Services</h3>
                     <ul>
                         <li data-en="IT Support" data-ja="ITサポート">IT Support</li>
@@ -169,17 +183,17 @@
         <section id="choose">
             <h2 data-en="Why Choose Us?" data-ja="なぜ当社を選ぶのでしょうか?">Why Choose Us?</h2>
             <div class="flex-container">
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Personalized Attention" data-ja="パーソナライズされた対応">Personalized Attention</h3>
                     <p data-en="Bergin Technologies works directly with you to ensure that every project receives the personal attention it deserves. We take the time to understand your specific needs and deliver solutions that align perfectly with your business goals." data-ja="Bergin Technologies はお客様と直接連携し、すべてのプロジェクトに適切な個別の配慮が行き届くよう努めています。時間をかけてお客様の特定のニーズを理解し、お客様のビジネス目標に完全に一致するソリューションを提供します。">Bergin Technologies works directly with you to ensure that every project receives the personal attention it deserves. We take the time to understand your specific needs and deliver solutions that align perfectly with your business goals.</p>
                 </div>
 
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Expertise and Experience" data-ja="専門知識と経験">Expertise and Experience</h3>
                     <p data-en="With over 20 years of experience in the IT industry, Bergin Technologies brings a wealth of knowledge and a proven track record of success. Our approach is grounded in best practices and continuous learning, ensuring that we provide the most effective solutions." data-ja="Bergin Technologies は、IT 業界で 20 年以上の経験があり、豊富な知識と実績を持っています。当社のアプローチはベスト プラクティスと継続的な学習に基づいており、最も効果的なソリューションを提供します。">With over 20 years of experience in the IT industry, Bergin Technologies brings a wealth of knowledge and a proven track record of success. Our approach is grounded in best practices and continuous learning, ensuring that we provide the most effective solutions.</p>
                 </div>
                 
-                <div class="card">
+                <div class="service-card">
                     <h3 data-en="Reliable and Trustworthy" data-ja="信頼性と信用性">Reliable and Trustworthy</h3>
                     <p data-en="Building long-term relationships based on trust and reliability is at the heart of our business. We pride ourselves on being a dependable partner you can count on for consistent quality and support." data-ja="信頼と信頼性に基づいた長期的な関係を築くことが、当社の事業の中核です。当社は、一貫した品質とサポートを期待できる信頼できるパートナーであることを誇りに思っています。">Building long-term relationships based on trust and reliability is at the heart of our business. We pride ourselves on being a dependable partner you can count on for consistent quality and support.</p>
                 </div>
