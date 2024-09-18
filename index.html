@@ -53,6 +53,32 @@
         #about, #services, #choose {
             padding-top: 20px;
         }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .service-item {
+            flex-basis: calc(50% - 10px);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .service-item ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .service-item {
+                flex-basis: 100%;
+            }
+        }
         .contact-button {
             border-radius: 35px;
             background-color: #0066cc;
@@ -95,34 +121,40 @@
 
         <section id="services">
             <h2 data-en="Our Services" data-ja="サービス">Our Services</h2>
-            
-            <h3 data-en="Application Development" data-ja="アプリケーション開発">Application Development</h3>
-            <ul>
-                <li data-en="Web Development" data-ja="ウェブ開発">Web Development</li>
-                <li data-en="Mobile App Development" data-ja="モバイルアプリ開発">Mobile App Development</li>
-                <li data-en="Custom Software Development" data-ja="カスタムソフトウェア開発">Custom Software Development</li>
-            </ul>
-
-            <h3 data-en="IT Consulting" data-ja="ITコンサルティング">IT Consulting</h3>
-            <ul>
-                <li data-en="Technology Strategy Consulting" data-ja="テクノロジー戦略コンサルティング">Technology Strategy Consulting</li>
-                <li data-en="System Integration Consulting" data-ja="システム統合コンサルティング">System Integration Consulting</li>
-                <li data-en="IT Project Management" data-ja="ITプロジェクト管理">IT Project Management</li>
-            </ul>
-
-            <h3 data-en="Cybersecurity Consulting" data-ja="サイバーセキュリティコンサルティング">Cybersecurity Consulting</h3>
-            <ul>
-                <li data-en="Security Strategy Consulting" data-ja="セキュリティ戦略コンサルティング">Security Strategy Consulting</li>
-                <li data-en="Security Assessments" data-ja="セキュリティ評価">Security Assessments</li>
-                <li data-en="Network Security Monitoring and Response" data-ja=ネットワークセキュリティの監視と対応">Network Security Monitoring and Response</li>
-            </ul>
-
-            <h3 data-en="Technical Support and Managed Services" data-ja="テクニカルサポートとマネージドサービス">Technical Support and Managed Services</h3>
-            <ul>
-                <li data-en="IT Support" data-ja="ITサポート">IT Support</li>
-                <li data-en="Network Setup and Maintenance" data-ja="ネットワークのセットアップとメンテナンス">Network Setup and Maintenance</li>
-                <li data-en="Cloud Services Management" data-ja="クラウドサービス管理">Cloud Services Management</li>
-            </ul> 
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3 data-en="Application Development" data-ja="アプリケーション開発">Application Development</h3>
+                    <ul>
+                        <li data-en="Web Development" data-ja="ウェブ開発">Web Development</li>
+                        <li data-en="Mobile App Development" data-ja="モバイルアプリ開発">Mobile App Development</li>
+                        <li data-en="Custom Software Development" data-ja="カスタムソフトウェア開発">Custom Software Development</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3 data-en="IT Consulting" data-ja="ITコンサルティング">IT Consulting</h3>
+                    <ul>
+                        <li data-en="Technology Strategy Consulting" data-ja="テクノロジー戦略コンサルティング">Technology Strategy Consulting</li>
+                        <li data-en="System Integration Consulting" data-ja="システム統合コンサルティング">System Integration Consulting</li>
+                        <li data-en="IT Project Management" data-ja="ITプロジェクト管理">IT Project Management</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3 data-en="Cybersecurity Consulting" data-ja="サイバーセキュリティコンサルティング">Cybersecurity Consulting</h3>
+                    <ul>
+                        <li data-en="Security Strategy Consulting" data-ja="セキュリティ戦略コンサルティング">Security Strategy Consulting</li>
+                        <li data-en="Security Assessments" data-ja="セキュリティ評価">Security Assessments</li>
+                        <li data-en="Network Security Monitoring and Response" data-ja="ネットワークセキュリティの監視と対応">Network Security Monitoring and Response</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3 data-en="Technical Support and Managed Services" data-ja="テクニカルサポートとマネージドサービス">Technical Support and Managed Services</h3>
+                    <ul>
+                        <li data-en="IT Support" data-ja="ITサポート">IT Support</li>
+                        <li data-en="Network Setup and Maintenance" data-ja="ネットワークのセットアップとメンテナンス">Network Setup and Maintenance</li>
+                        <li data-en="Cloud Services Management" data-ja="クラウドサービス管理">Cloud Services Management</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section id="choose">
