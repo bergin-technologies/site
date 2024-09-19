@@ -262,7 +262,23 @@
                 elem.textContent = elem.getAttribute(`data-${lang}`);
             });
             document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
         }
+
+        function detectLanguage() {
+            const storedLang = localStorage.getItem('preferredLanguage');
+            if (storedLang) {
+                return storedLang;
+            }
+            
+            const browserLang = navigator.language || navigator.userLanguage;
+            return browserLang.startsWith('ja') ? 'ja' : 'en';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const detectedLang = detectLanguage();
+            switchLanguage(detectedLang);
+        });
     </script>
 </body>
 </html>
