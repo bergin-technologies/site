@@ -6,15 +6,20 @@
     <title data-en="Bergin Technologies" data-ja="Bergin Technologies">Bergin Technologies</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <style>
         body {
-            font-family: "Noto Sans", sans-serif;
+            font-family: "Red Hat Display", sans-serif;
             font-size: 18px;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+        }
+        body.japanese {
+            font-family: "Noto Sans JP", sans-serif;
         }
         header {
             background-color: #000000;
@@ -31,6 +36,7 @@
             gap: 10px;
         }
         .lang-button {
+            font-family: "Red Hat Display", sans-serif;
             border-radius: 5px;
             background-color: #0066cc;
             border: none;
@@ -98,15 +104,26 @@
         }
         .service-card {
             flex-basis: 40%;
-            padding: 25px;
+            padding: 20px;
             background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        .service-header {
+            display: flex;
+            align-items: center;
+        }
+        .service-header h3 {
+            margin-top: 6px;
+            margin-left: 16px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+        }
         .service-card span {
             margin-top: 0;
             margin-bottom: 15px;
-            padding: 12px;
+            padding: 8px;
             text-align: center;
             font-size: 48px;
             color: #fff;
@@ -115,10 +132,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .service-card h3 {
-            margin-top: 0;
-            color: #000;
-        }
+
         .service-card ul {
             padding-left: 10px;
             padding-right: 10px;
@@ -128,10 +142,10 @@
         }
 
         .service-card ul li {
-            padding-left: 20px;
-            text-indent: -20px;
+            padding-left: 16px;
+            text-indent: -12px;
         }
-        
+
         .service-card ul li::before {
             content: '\e5cc';
             font-family: 'Material Symbols Outlined';
@@ -186,8 +200,8 @@
     <header>
         <img id="logo" src="logo.png">
         <div id="lang-switcher">
-            <a href="#" class="lang-button" onclick="switchLanguage('en')">English</a>
-            <a href="#" button class="lang-button" onclick="switchLanguage('ja')">日本語</a>
+            <a href="#" class="lang-button default-font" onclick="switchLanguage('en')">English</a>
+            <a href="#" button class="lang-button default-font" onclick="switchLanguage('ja')">日本語</a>
         </div>
     </header>
 
@@ -213,8 +227,10 @@
             <h2 data-en="Our Services" data-ja="サービス">Our Services</h2>
             <div class="service-container">
                 <div class="service-card">
-                    <span class="material-symbols-outlined">transform</span>
-                    <h3 data-en="Digital Transformation (DX)" data-ja="デジタル変革 (DX)">Digital Transformation (DX)</h3>
+                    <div class="service-header">
+                        <span class="material-symbols-outlined">transform</span>
+                        <h3 data-en="Digital Transformation (DX)" data-ja="デジタル変革 (DX)">Digital Transformation (DX)</h3>
+                    </div>
                     <p data-en="Revolutionize your business through DX by seamlessly integrating cutting-edge digital technologies to enhance operational efficiency, customer experience, and competitive positioning." data-ja="最先端のデジタル技術をシームレスに統合し、業務効率、顧客体験、競争力を向上させて、DX によってビジネスを革新します。">
                         Revolutionize your business through DX by seamlessly integrating cutting-edge digital technologies to enhance operational efficiency, customer experience, and competitive positioning.
                     </p>
@@ -229,8 +245,10 @@
                 </div>
 
                 <div class="service-card">
-                    <span class="material-symbols-outlined">finance_mode</span>
-                    <h3 data-en="Business Management Systems" data-ja="ビジネス管理システム">Business Management Systems</h3>
+                    <div class="service-header">
+                        <span class="material-symbols-outlined">finance_mode</span>
+                        <h3 data-en="Business Management Systems" data-ja="ビジネス管理システム">Business Management Systems</h3>
+                    </div>
                     <p data-en="Streamline your operations with our customized management systems to optimize every aspect of your business." data-ja="カスタマイズされた管理システムを使用して業務を合理化し、ビジネスのあらゆる側面を最適化します。">
                         Streamline your operations with our customized management systems to optimize every aspect of your business.
                     </p>
@@ -245,8 +263,10 @@
                 </div>
                 
                 <div class="service-card">
-                    <span class="material-symbols-outlined">security</span>
-                    <h3 data-en="Network Security Monitoring" data-ja="ネットワークセキュリティ監視">Network Security Monitoring</h3>
+                    <div class="service-header">
+                        <span class="material-symbols-outlined">security</span>
+                        <h3 data-en="Network Security Monitoring" data-ja="ネットワークセキュリティ監視">Network Security Monitoring</h3>
+                    </div>
                     <p data-en="Safeguard your digital assets with our round-the-clock network security monitoring to protect your organization." data-ja="組織を保護するために、当社の 24 時間体制のネットワーク セキュリティ監視によりデジタル資産を保護します。">
                         Safeguard your digital assets with our round-the-clock network security monitoring to protect your organization.
                     </p>
@@ -262,8 +282,10 @@
                 </div>
 
                 <div class="service-card">
-                    <span class="material-symbols-outlined">build</span>
-                    <h3 data-en="Technical Support & Managed Services" data-ja="テクニカルサポートとマネージドサービス">Technical Support & Managed Services</h3>
+                    <div class="service-header">
+                        <span class="material-symbols-outlined">build</span>
+                        <h3 data-en="Technical Support & Managed Services" data-ja="テクニカルサポートとマネージドサービス">Technical Support & Managed Services</h3>
+                    </div>
                     <p data-en="Empower your business with our comprehensive IT support and managed services to keep your infrastructure running smoothly." data-ja="当社の包括的な IT サポートとマネージド サービスでビジネスを強化し、インフラストラクチャを円滑に稼働させましょう。">
                         Empower your business with our comprehensive IT support and managed services to keep your infrastructure running smoothly.
                     </p>
@@ -278,8 +300,10 @@
                 </div>
                 
                 <div class="service-card">
-                    <span class="material-symbols-outlined">cloud</span>
-                    <h3 data-en="Cloud Service Management" data-ja="クラウドサービス管理">Cloud Service Management</h3>
+                    <div class="service-header">
+                        <span class="material-symbols-outlined">cloud</span>
+                        <h3 data-en="Cloud Service Management" data-ja="クラウドサービス管理">Cloud Service Management</h3>
+                    </div>
                     <p data-en="Optimize your cloud operations with our cloud service management to help you maximize the efficiency, security, and cost-effectiveness of your cloud infrastructure." data-ja="当社のクラウド サービス管理を使用してクラウド運用を最適化し、クラウド インフラストラクチャの効率、セキュリティ、コスト効率を最大限に高めます。">
                         Optimize your cloud operations with our cloud service management to help you maximize the efficiency, security, and cost-effectiveness of your cloud infrastructure.
                     </p>
@@ -324,6 +348,13 @@
             });
             document.documentElement.lang = lang;
             localStorage.setItem('preferredLanguage', lang);
+            
+            // Add or remove class based on language
+            if (lang === 'ja') {
+                document.body.classList.add('japanese');
+            } else {
+                document.body.classList.remove('japanese');
+            }
         }
 
         function detectLanguage() {
